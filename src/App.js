@@ -1,24 +1,23 @@
 import logo from './logo.svg';
-import 'Estilos/estilos.scss'
+import {useState, useEffect} from "react";
+import {Digimon} from "./Componentes/Digimon";
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [data, setData] = useState(null);
+    useEffect(() => {
+        fetch("https://digimon-api.vercel.app/api/digimon").then((response) => response.json()).then((data) => setData(data))
+    }, []);
+    return (
+        <div className="galeria">
+            {data?.map(function (digimon) {
+                return <Digimon name={digimon.name} img={digimon.img} key={digimon.name}/>
+            })}
+
+        </div>
+    )
+
+
 }
 
 export default App;

@@ -1,0 +1,13 @@
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px black;
+  margin: 1%;
+  border-radius: 2%;
+  background-color: #056AA6;
+  -webkit-box-shadow: 10px 10px 5px 0px #F2B33D;
+  -moz-box-shadow: 10px 10px 5px 0px #F2B33D;
+  box-shadow: 10px 10px 5px 0px #F2B33D;
+}

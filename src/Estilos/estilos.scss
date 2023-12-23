@@ -1,0 +1,105 @@
+@import "digimon";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+* {
+  font-family: 'Orbitron', sans-serif;
+
+}
+
+.menu {
+  background-color: #085A8C;
+  color: #F2D544;
+
+
+}
+
+
+@media (max-width: 425px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .brandLogo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        max-width: 75%;
+      }
+
+      .webTitle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+  .galeria {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 768px) and (min-width: 426px){
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .brandLogo {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      max-width: 33%;
+      padding-right: 25%;
+      img {
+        max-width: 100%;
+      }
+
+      .webTitle {
+        display: flex;
+        align-self: flex-start;
+        justify-self: flex-start;
+      }
+    }
+  }
+  .galeria {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+@media (min-width: 769px){
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .brandLogo {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      max-width: 33%;
+      padding-right: 25%;
+      img {
+        max-width: 100%;
+      }
+
+      .webTitle {
+        display: flex;
+        align-self: flex-start;
+        justify-self: flex-start;
+      }
+    }
+  }
+  .galeria {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+}
